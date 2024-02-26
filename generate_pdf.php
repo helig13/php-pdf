@@ -103,12 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $body1 = '
                 <style>
-                    .img-container {
-                        float: right;
-                        margin-right: 30px;
-                        width: 300px;
-                        height: 350px;
-                    }
                     .netto-container {
                         padding-top: 200px;
                     }    
@@ -118,8 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         font-weight: bold;
                         font-size: 28px;
                         height: 40px;
-                        position: fixed;
-                        top: 0;
                         letter-spacing: 1px;
                     }    
                     .netto-text {
@@ -131,12 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         max-width: 300px;
                         letter-spacing: 1px;
                     }  
-                    .body-container {
-                        position: fixed;
-                        top: -20px;
-                        width: 120%;
-                        height: 100%;
-                    }
+                   
                     .table-container span {
                         color: #000000;
                         font-family:cooperhewitt;
@@ -146,19 +133,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     .table-container .main-table {
                         margin-top: 10px;
-                        border-spacing: 0px;
+                        border-spacing: 0;
                         border-collapse: collapse;
+                        width: 100%;
                     }  
                     .table-container .main-table th {
                         border: 2px solid #000000;
                         border-bottom: none; 
-                        width: 230px;
                         padding: 13px 0;
                     }
                     .table-container .main-table td {
                         border: 2px solid #000000;
                         text-align: center; 
-                        width: 230px;
                         padding: 13px 0;
                         font-style: italic;
                     }   
@@ -217,20 +203,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         font-size: 12px;
                         letter-spacing: 1px;
                     }
-                    .diagram-container {
-                        width: 100%;
-                        text-align: left;
-                    }
-                    .diagram-container .title {
-                        font-family:cooperhewitt;
-                        font-size: 24px;
-                        letter-spacing: 1px;
-                        font-weight: bold;  
-                    }
                 </style>
                 
                 <div class="body-container">
-                    <img class="img-container" src="./src/img/pdf_img.png" alt="">
                     <div class="netto-container">
                         <span class="netto-title">1.285.062,89 € netto</span>
                         <div class="netto-text">13,27 %UMSATZWACHSTUM ZUM VORJAHRESMONAT</div>
@@ -261,50 +236,125 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <td>...</td>
                                     <td>...</td>
                                 </tr>
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr> 
+                                <tr>
+                                    <td>TP18</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>    
                             </tbody>
                         </table>
-                    </div>
-                    <div class="two-blocks">
-                        <div class="first-block">
-                            <div class="total-price-container">
-                                <div class="total-price">742,34 €</div>
-                                <div class="total-price-text">durchschnittlicher Warenkorb</div>
-                            </div>
-                            <div class="privatkunden-total-price-container">
-                                <div style="width: 100%; padding-bottom: 10px;">
-                                    <div class="privatkunden-text">
-                                        durchschnittlicher Warenkorb Privatkunden
-                                    </div>
-                                    <div class="privatkunden-price">
-                                        625,12 €
-                                    </div>
-                                </div>
-                                <div style="width: 100%">
-                                    <div class="privatkunden-text">
-                                        durchschnittlicher Warenkorb Privatkunden
-                                    </div>
-                                    <div class="privatkunden-price">
-                                        1.239,29 €
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="total-price-container">
-                                <div class="total-price">712,72 €</div>
-                                <div class="total-price-text">Median Warenkorb</div>
-                            </div>
-                        </div>
-                        <div class="second-block">
-                            <div class="diagram-container">
-                                <div class="title">Lieferungsquote</div>
-                                <div class="diagram">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>           
+                    </div>          
                 </div> 
                 
                ';
+
+    $imgcontainer = '   
+                        <style>
+                            .img-container {
+                                position: fixed;
+                                right: -100px;
+                                top: -30px;
+                                width: 280px;
+                                height: 330px;
+                            }
+                        </style>
+                        <div class="img-container">
+                            <img src="./src/img/pdf_img.png" alt="">
+                        </div>
+                        
+                    ';
+
+    $twoBlocks = '  <style>
+                    .diagram-container {
+                        width: 100%;
+                        text-align: left;
+                    }
+                    .diagram-container .title {
+                        font-family:cooperhewitt;
+                        font-size: 24px;
+                        letter-spacing: 1px;
+                        font-weight: bold;  
+                        text-align: center;
+                    }
+                </style>     
+                <div class="two-blocks">
+                    <div class="first-block">
+                        <div class="total-price-container">
+                            <div class="total-price">742,34 €</div>
+                            <div class="total-price-text">durchschnittlicher Warenkorb</div>
+                        </div>
+                        <div class="privatkunden-total-price-container">
+                            <div style="width: 100%; padding-bottom: 10px;">
+                                <div class="privatkunden-text">
+                                    durchschnittlicher Warenkorb Privatkunden
+                                </div>
+                                <div class="privatkunden-price">
+                                    625,12 €
+                                </div>
+                            </div>
+                            <div style="width: 100%">
+                                <div class="privatkunden-text">
+                                    durchschnittlicher Warenkorb Privatkunden
+                                </div>
+                                <div class="privatkunden-price">
+                                    1.239,29 €
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-price-container">
+                            <div class="total-price">712,72 €</div>
+                            <div class="total-price-text">Median Warenkorb</div>
+                        </div>
+                    </div>
+                    <div class="second-block">
+                        <div class="diagram-container">
+                            <div class="title">Lieferungsquote</div>
+                            <div class="diagram">    
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+             ';
 
     $footer1 = '
                 <style>
@@ -414,6 +464,186 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <td>...</td>
                                     <td>...</td>
                                 </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Anzahl AB´s Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -424,7 +654,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // Generate the full HTML
-    $html = $header1 . $body1 . $footer1;
+    $html = $header1 . $imgcontainer . $body1 . $twoBlocks . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
