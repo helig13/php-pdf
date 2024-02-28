@@ -147,61 +147,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         text-align: center; 
                         padding: 13px 0;
                         font-style: italic;
-                    }   
-                    .two-blocks {
-                        width: 100%;
-                        margin-top: 60px;
-                    }
-                    .first-block {
-                        float: left;
-                        margin-right: 0;
-                        width: 50%;
-                    }
-                    .total-price-container {
-                        background: #003D62;
-                        padding: 15px 10px;
-                        border-radius: 40px;
-                        text-align: center;
-                        width: 250px;
-                    }
-                    .total-price-container .total-price {
-                        color: #ffffff;
-                        font-family:cooperhewitt;
-                        font-style: italic;
-                        font-size: 22px;
-                        letter-spacing: 1px;
-                        padding-bottom: 10px;
-                    }
-                    .total-price-container .total-price-text {
-                        color: #ffffff;
-                        font-family:cooperhewitt;
-                        font-weight: lighter;
-                        font-size: 16px;
-                        letter-spacing: 1px;
-                    }
-                    .privatkunden-total-price-container {
-                        width: 100%;
-                        padding: 20px 0;
-                    }
-                    .privatkunden-price,
-                    .privatkunden-text {
-                        width: 50%;
-                        float: left;
-                        margin-right: 0;
-                    }
-                    .privatkunden-price {
-                        color: #000000;
-                        font-family:cooperhewitt;
-                        font-weight: bold;
-                        font-size: 18px;
-                        letter-spacing: 1px;
-                        margin-top: -5px;
-                    }
-                    .privatkunden-text {
-                        line-height: 14px;
-                        font-family:cooperhewitt;
-                        font-size: 12px;
-                        letter-spacing: 1px;
                     }
                 </style>
                 
@@ -315,6 +260,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         letter-spacing: 1px;
                         font-weight: bold;  
                         text-align: center;
+                    }
+                    .two-blocks {
+                        width: 100%;
+                        padding-top: 120px;
+                    }
+                    .first-block {
+                        float: left;
+                        margin-right: 0;
+                        width: 50%;
+                    }
+                    .total-price-container {
+                        background: #003D62;
+                        padding: 15px 10px;
+                        border-radius: 40px;
+                        text-align: center;
+                        width: 250px;
+                    }
+                    .total-price-container .total-price {
+                        color: #ffffff;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        font-size: 22px;
+                        letter-spacing: 1px;
+                        padding-bottom: 10px;
+                    }
+                    .total-price-container .total-price-text {
+                        color: #ffffff;
+                        font-family:cooperhewitt;
+                        font-weight: lighter;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                    }
+                    .privatkunden-total-price-container {
+                        width: 100%;
+                        padding: 20px 0;
+                    }
+                    .privatkunden-price,
+                    .privatkunden-text {
+                        width: 50%;
+                        float: left;
+                        margin-right: 0;
+                    }
+                    .privatkunden-price {
+                        color: #000000;
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        margin-top: -5px;
+                    }
+                    .privatkunden-text {
+                        line-height: 14px;
+                        font-family:cooperhewitt;
+                        font-size: 12px;
+                        letter-spacing: 1px;
                     }
                 </style>     
                 <div class="two-blocks">
@@ -482,179 +482,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <td>...</td>
                                     <td>...</td>
                                 </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
-                                <tr>
-                                    <td>Anzahl AB´s Gesamt</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                
               ';
+    $twoDiagrams = '
+                    <style>
+                        .two-diagrams {
+                            width: 100%;
+                            padding-top: 120px;
+                        }
+                        .diagram-container {
+                            width: 100%;
+                            text-align: left;
+                        }
+                        .diagram-container .title {
+                            font-family:cooperhewitt;
+                            font-size: 24px;
+                            letter-spacing: 1px;
+                            font-weight: bold;  
+                            text-align: center;
+                        }
+                        .diagram-block {
+                            float: left;
+                            margin-right: 0;
+                            width: 50%;
+                        }
+                    </style>     
+                    <div class="two-diagrams">
+                        <div class="diagram-block">
+                            <div class="diagram-container">
+                                <div class="title">Lieferungsquote</div>
+                                <div class="diagram">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diagram-block">
+                            <div class="diagram-container">
+                                <div class="title">Lieferungsquote</div>
+                                <div class="diagram">    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   ';
 
 
 
     // Generate the full HTML
-    $html = $header1 . $imgcontainer . $body1 . $twoBlocks . $footer1;
+    $html = $header1 . $table . $twoDiagrams . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
