@@ -527,11 +527,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                    ';
+    $heatMap = '
+                <style>
+                    .heatmat-container {
+                        width: 100%;
+                        margin-top: 20px;
+                    }
+                    .heatmap-img,
+                    .heatmat-text {
+                        width: 50%;
+                        float: left;
+                        margin-right: 0;
+                    }
+                    .heat-mat-title {
+                        font-family:cooperhewitt;
+                        font-size: 46px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        color: #003D62;
+                        padding-top: 60px;  
+                    }
+                    .heat-mat-sub-title {
+                        font-family:cooperhewitt;
+                        font-size: 22px;
+                        letter-spacing: 1px;
+                        font-weight: bold;
+                        color: #000000;
+                    }
+                    .heat-mat-text {
+                        font-family:cooperhewitt;
+                        font-size: 16px;
+                        font-weight: lighter;
+                        line-height: 22px;
+                        color: #000000;
+                        padding-top: 10px;
+                        letter-spacing: 0.5px;
+                    }
+                    .heatmap-img {
+                        padding-left: 10px;
+                    }
+                    .heatmap-img img {
+                        width: 100%;
+                    }
+                </style>
+                <div class="heatmat-container">
+                    <div class="heatmat-text">
+                       <div class="heat-mat-title">HEATMAP</div> 
+                       <div class="heat-mat-sub-title">GESAMTUMSATZ</div> 
+                       <div class="heat-mat-text">
+                            Hier sind die Bestellungen in Stück ausgewertet.
+                            .Rot bedeutet eine hohe Dichte an Bestellungen
+                            und grün eine geringe Dichte.
+                       </div> 
+                    </div>
+                    <div class="heatmap-img">
+                        <img src="" alt="">
+                    </div>
+                </div>
+               ';
 
 
 
     // Generate the full HTML
-    $html = $header1 . $table . $twoDiagrams . $footer1;
+    $html = $header1 . $table . $heatMap . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
