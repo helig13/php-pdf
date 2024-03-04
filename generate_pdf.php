@@ -565,6 +565,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     .heatmap-img {
                         padding-left: 10px;
+                        width: 48%;
+                        margin-right: 0;
+                        float: left;
                     }
                     .heatmap-img img {
                         width: 100%;
@@ -581,15 +584,158 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                        </div> 
                     </div>
                     <div class="heatmap-img">
-                        <img src="" alt="">
+                        <img src="https://db24-baywa-shop.testdrive.redoo.cloud/wp-content/uploads/2014/02/0993-01.jpg" alt="">
                     </div>
                 </div>
                ';
+    $table2 = '
+                <style>
+                    .body-container {
+                        width: 100%;
+                        padding-top: 120px;
+                    }
+                    .table-container span {
+                        color: #000000;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        font-size: 22px;
+                        letter-spacing: 1px;
+                    }
+                    .table-container .main-table {
+                        margin-top: 10px;
+                        border-spacing: 0px;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }  
+                    .table-container .main-table th {
+                        border: 2px solid #000000;
+                        border-bottom: none; 
+                        padding: 13px 0;
+                        color: #000000;
+                        font-family:cooperhewitt;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        
+                    }
+                    .table-container .main-table td {
+                        border: 2px solid #000000;
+                        text-align: center; 
+                        padding: 13px 0;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                    }
+                    .table-sub-title {
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        padding: 10px 0;
+                    }
+                </style>
+                <div class="body-container">
+                    <div class="table-container">
+                        <span>UMSATZ PRO MI TARBEI TER</span>
+                        <table class="main-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Anzahl aktiver MA</th>
+                                    <th>Umsatz pro MA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Vertrieb</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Logistik</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>LKW Fahrer</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Produktion</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Alle Mitarbeiter Gesamt</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              ';
+    $incomingCalls = '
+                    <style>
+                        .incoming-calls-container {
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .incoming-calls-number {
+                            font-family:cooperhewitt;
+                            font-weight: bold;
+                            color: #003D62;
+                            font-size: 48px;
+                            padding-top: 90px;
+                        }
+                        .incoming-calls-text {
+                            font-family:cooperhewitt;
+                            font-weight: bold;
+                            color: #000000;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                        }
+                        .average-duration-container {
+                            background: #003D62;
+                            padding: 15px 10px;
+                            border-radius: 40px;
+                            text-align: center;
+                            width: 250px;
+                            margin: 0 auto;
+                            margin-top: 30px;
+                        }
+                        .average-duration-container .average-duration-total {
+                            color: #ffffff;
+                            font-family:cooperhewitt;
+                            font-style: italic;
+                            font-size: 22px;
+                            letter-spacing: 1px;
+                            padding-bottom: 10px;
+                        }
+                        .average-duration-container .average-duration-text {
+                            color: #ffffff;
+                            font-family:cooperhewitt;
+                            font-weight: lighter;
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                        }
+                        
+                    </style>
+                    <div class="incoming-calls-container">
+                        <div class="incoming-calls-number">637</div>
+                        <div class="incoming-calls-text">EINGEHENDE ANRUFE IM ZEI TRAUM</div>
+                    </div>
+                    <div class="average-duration-container">
+                            <div class="average-duration-total">3,27 Minuten</div>
+                            <div class="average-duration-text">durchschnittliche Länge</div>
+                        </div>
+                    <div class="incoming-calls-container">
+                        <div class="incoming-calls-number">8</div>
+                        <div class="incoming-calls-text">EINGEHENDE ANRUFE PRO AKT IVEM MA IM VERTRIEB</div>
+                    </div>
+                ';
 
 
 
     // Generate the full HTML
-    $html = $header1 . $table . $heatMap . $footer1;
+    $html = $header1 . $table2 . $incomingCalls . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
