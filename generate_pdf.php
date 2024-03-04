@@ -868,10 +868,196 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
               ';
 
+    $headerKunden = '
+                <style>
+                    .header-container {
+                        background: #003D62;
+                        position: fixed;
+                        top: -60px;
+                        left: -60px;
+                        width: 120%;
+                        padding: 25px 0 25px 60px;
+                    }
+                    .header-title {
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 58px;
+                        color: #ffffff;
+                        letter-spacing: 1.5px;
+                    }
+                </style>
+                <div class="header-container">
+                    <span class="header-title">Kundenstruktur</span>
+                </div> 
+               ';
+
+    $kundenDiagram = '
+                        <style>
+                           .kunden-diagram-container {
+                                width: 100%;
+                                padding-top: 80px;
+                           } 
+                           .kunden-main-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 38px;
+                                color: #003D62;
+                                text-align: center;
+                                letter-spacing: 1px;
+                           }
+                           .kunden-sub-title {
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                                font-size: 18px;
+                                color: #000000;
+                                text-align: center;
+                                letter-spacing: 2px;
+                                padding-top: 5px;
+                           }
+                           .kunden-diagram {
+                                width: 100%;
+                                padding-top: 30px;
+                           }
+                           .kunden-diagram .diagram,
+                           .kunden-diagram .diagram-info-container {
+                                width: 49%;
+                                float: left;
+                           }
+                           .diagram-info {
+                                padding-bottom: 30px;
+                           }
+                           .diagram-percent {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 32px;
+                                color: #003D62;
+                           }
+                           .diagram-text {
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                                font-size: 14px;
+                                color: #000000;
+                                padding-top: 5px;
+                           }
+                        </style>
+                        <div class="kunden-diagram-container">
+                            <div class="kunden-title">
+                                <div class="kunden-main-title">1.252 Kunden</div>
+                                <div class="kunden-sub-title">GESAMT</div>
+                            </div>
+                            <div class="kunden-diagram">
+                                <div class="diagram">
+                                    <img style="width: 100%" src="" alt="">
+                                </div>
+                                <div class="diagram-info-container">
+                                    <div class="diagram-info">
+                                        <div class="diagram-percent">47 %</div>
+                                        <div class="diagram-text">PRIVATKUNDENANTEIL</div>
+                                    </div>
+                                    <div class="diagram-info">
+                                        <div class="diagram-percent">53 %</div>
+                                        <div class="diagram-text">FIRMENKUNDENANTEIL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     ';
+
+    $kundenTable = '
+                    <style>
+                    .kunden-container {
+                        width: 100%;
+                        padding-top: 120px;
+                    }
+                    .kunden-container .table-title {
+                        color: #000000;
+                        font-weight: bold;
+                        font-size: 22px;
+                        letter-spacing: 2px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    .kunden-container .table-sub-title {
+                        color: #000000;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    .kunden-container .main-table {
+                        margin-top: 10px;
+                        border-spacing: 0px;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }  
+                    .kunden-container .main-table th {
+                        border: 2px solid #000000;
+                        border-bottom: none; 
+                        padding: 13px 0;
+                        color: #000000;
+                        font-family:cooperhewitt;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        
+                    }
+                    .kunden-container .main-table td {
+                        border: 2px solid #000000;
+                        text-align: center; 
+                        padding: 13px 0;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                    }
+                </style>
+                <div class="kunden-container">
+                    <div class="table-container">
+                        <div class="table-title">KUNDENHERKUNFT</div>
+                        <div class="table-sub-title">Auswertung der Kundenbefragung</div>
+                        <table class="main-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Stück</th>
+                                    <th>in %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Google</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Standorte</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Empfehlungen</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeitung</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td>Werbung</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                   ';
+
 
 
     // Generate the full HTML
-    $html = $headerRentabilitat . $rohertrag . $blueTable . $footer1;
+    $html = $headerKunden . $kundenDiagram . $kundenTable . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
