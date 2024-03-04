@@ -100,6 +100,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <span class="header-title">Umsatz</span>
                 </div> 
                ';
+    $headerRentabilitat = '
+                <style>
+                    .header-container {
+                        background: #003D62;
+                        position: fixed;
+                        top: -60px;
+                        left: -60px;
+                        width: 120%;
+                        padding: 25px 0 25px 60px;
+                    }
+                    .header-title {
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 58px;
+                        color: #ffffff;
+                        letter-spacing: 1.5px;
+                    }
+                </style>
+                <div class="header-container">
+                    <span class="header-title">Rentabilität</span>
+                </div> 
+               ';
 
     $body1 = '
                 <style>
@@ -732,10 +754,124 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 ';
 
+    $rohertrag = '
+                   <style>
+                        .rohertrag-container {
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .rohertrag-number {
+                            font-family: cooperhewitt;
+                            font-weight: bold;
+                            color: #003D62;
+                            font-size: 48px;
+                            padding-top: 90px;
+                        }
+                        .rohertrag-sub-title {
+                            font-family: cooperhewitt;
+                            font-weight: bold;
+                            color: #000000;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                            padding-bottom: 10px;
+                        }
+                        .rohertrag-text {
+                            font-family: cooperhewitt;
+                            font-style: italic;
+                            color: #000000;
+                            font-size: 12px;
+                            letter-spacing: 2px; 
+                        }
+                    </style>
+                    <div class="rohertrag-container">
+                        <div class="rohertrag-number">674.834 €</div>
+                        <div class="rohertrag-sub-title">ROHERTRAG</div>
+                        <div class="rohertrag-text">Berechnung lt. System (Nicht aus BWA)</div>
+                    </div>
+                 ';
+
+    $blueTable = '
+                <style>
+                    .rohertrag-body-container {
+                        width: 100%;
+                        padding-top: 120px;
+                    }
+                    .rohertrag-table-container .main-table {
+                        margin-top: 10px;
+                        border-spacing: 0px;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }  
+                    .rohertrag-table-container .main-table th {
+                        border: 2px solid #000000;
+                        border-bottom: none; 
+                        padding: 13px 0;
+                        color: #ffffff;
+                        font-family:cooperhewitt;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        background: #003d62;
+                        
+                    }
+                    .rohertrag-table-container .main-table td {
+                        border: 2px solid #000000;
+                        text-align: center; 
+                        padding: 13px 0;
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                    }
+                    .rohertrag-table-container .table-sub-title {
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        padding: 10px 0;
+                    }
+                </style>
+                <div class="rohertrag-body-container">
+                    <div class="rohertrag-table-container">
+                        <table class="main-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Rohertrag in €</th>
+                                    <th>Rohertrag in %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background:#003d62;color:#ffffff;">Vertrieb</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#003d62;color:#ffffff;">Logistik</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#003d62;color:#ffffff;">LKW Fahrer</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#003d62;color:#ffffff;">Produktion</td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td style="background:#003d62;color:#ffffff;">Summe</td>
+                                    <td style="background:#003d62;color:#ffffff;">...</td>
+                                    <td style="background:#003d62;color:#ffffff;">...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              ';
+
 
 
     // Generate the full HTML
-    $html = $header1 . $table2 . $incomingCalls . $footer1;
+    $html = $headerRentabilitat . $rohertrag . $blueTable . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
