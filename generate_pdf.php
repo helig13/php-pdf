@@ -1054,10 +1054,137 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                    ';
 
+    $produktion = '
+                <style>
+                    .header-container {
+                        background: #003D62;
+                        position: fixed;
+                        top: -60px;
+                        left: -60px;
+                        width: 120%;
+                        padding: 25px 0 25px 60px;
+                    }
+                    .header-title {
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 58px;
+                        color: #ffffff;
+                        letter-spacing: 1.5px;
+                    }
+                </style>
+                <div class="header-container">
+                    <span class="header-title">Produktion</span>
+                </div> 
+               ';
+
+    $produktionTable = '
+                    <style>
+                        .produktion-table-container {
+                            width: 100%;
+                            padding-top: 120px;
+                        }
+                        .produktion-table-container .table-title {
+                            color: #000000;
+                            font-weight: bold;
+                            font-size: 22px;
+                            letter-spacing: 2px;
+                            padding-bottom: 15px;
+                        }
+                        
+                        .produktion-table-container .table-sub-title {
+                            color: #000000;
+                            font-family:cooperhewitt;
+                            font-style: italic;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            padding-bottom: 15px;
+                        }
+                        
+                        .produktion-table-container .main-table {
+                            margin-top: 10px;
+                            border-spacing: 0px;
+                            border-collapse: collapse;
+                            width: 100%;
+                        }  
+                        .produktion-table-container .main-table th {
+                            border: 2px solid #000000;
+                            border-bottom: none; 
+                            padding: 13px 0;
+                            color: #000000;
+                            font-family:cooperhewitt;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                        }
+                        .produktion-table-container .main-table td {
+                            border: 2px solid #000000;
+                            text-align: center; 
+                            padding: 13px 0;
+                            font-family:cooperhewitt;
+                            font-style: italic;
+                        }
+                    </style>
+                    <div class="produktion-table-container">
+                        <div class="table-container">
+                            <div class="table-title">PRODUKTIONSREPORT</div>
+                            <table class="main-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:150px"></th>
+                                        <th>Wriezen</th>
+                                        <th style="width:40px">%</th>
+                                        <th>Eishausen</th>
+                                        <th style="width:40px">%</th>
+                                        <th>Kevelaer</th>
+                                        <th style="width:40px">%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:5px 3px;">produzierte Quadratmeter Gesamt</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px 3px;">produzierte Quadratmeter 1.Wahl</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px 3px;">produzierte Quadratmeter 2.Wahl</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px 3px;">Aktive MA (Produktion)</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                        <td>...</td>
+                                        <td>..</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   ';
+
 
 
     // Generate the full HTML
-    $html = $headerKunden . $kundenDiagram . $kundenTable . $footer1;
+    $html = $produktion . $produktionTable . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
