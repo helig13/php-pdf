@@ -1275,10 +1275,180 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                           ';
 
+    $logistik = '
+                <style>
+                    .header-container {
+                        background: #003D62;
+                        position: fixed;
+                        top: -60px;
+                        left: -60px;
+                        width: 120%;
+                        padding: 25px 0 25px 60px;
+                    }
+                    .header-title {
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 58px;
+                        color: #ffffff;
+                        letter-spacing: 1.5px;
+                    }
+                </style>
+                <div class="header-container">
+                    <span class="header-title">Logistik</span>
+                </div> 
+               ';
+
+    $logistikTable = '
+                         <style>
+                            .logistik-table-container {
+                                width: 100%;
+                                padding-top: 30px;
+                            }
+                            .logistik-table-container .main-table {
+                                margin-top: 10px;
+                                border-spacing: 0px;
+                                border-collapse: collapse;
+                                width: 100%;
+                            }  
+                            .logistik-table-container .main-table th {
+                                border: 2px solid #000000;
+                                border-bottom: none; 
+                                padding: 13px 0;
+                                color: #000000;
+                                font-family:cooperhewitt;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                
+                            }
+                            .logistik-table-container .main-table td {
+                                border: 2px solid #000000;
+                                text-align: center; 
+                                padding: 13px 0;
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                            }
+                        </style>
+                        <div class="logistik-table-container">
+                            <div class="table-container">
+                                <table class="main-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 150px"></th>
+                                            <th>gefahrene <br/> km</th>
+                                            <th>Kosten</th>
+                                            <th>Overhead <br/> umgelegt</th>
+                                            <th>enthaltene <br/> Pauschalen <br/> Gesamt</th>
+                                            <th>Ergebnis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>MOl-DB 232</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MOl-DB 232</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                     ';
+
+    $logistikInfo = '   
+                        <style>
+                            .logistik-container {
+                                padding-top: 100px;
+                                width: 100%;
+                            }
+                            .logistik-mitarbeiter,
+                            .logistik-lkv {
+                                width: 49%;
+                                float: left;
+                            }
+                            .logistik-main-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 38px;
+                                color: #003D62;
+                                text-align: left;
+                                letter-spacing: 1.5px;
+                            }
+                            .logistik-sub-title {
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                                font-size: 18px;
+                                color: #000000;
+                                text-align: left;
+                                letter-spacing: 2px;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                            }
+                        </style>
+                        <div class="logistik-container">
+                            <div class="logistik-mitarbeiter">
+                                <div class="logistik-main-title">5</div>
+                                <div class="logistik-sub-title">LOGISTIKMITARBEITER</div>
+                            </div>
+                            <div class="logistik-lkv">
+                                <div class="logistik-main-title">19</div>
+                                <div class="logistik-sub-title">LKW-FAHRER</div>
+                            </div>
+                        </div>
+                    ';
+
+    $deliveryInfo = '
+                        <style>
+                            .delivery-container {
+                                width: 100%;
+                                padding-top: 30px;
+                            }
+                            .delivery-main-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 38px;
+                                color: #003D62;
+                                letter-spacing: 1.5px;
+                                text-align: center;
+                            }
+                            .delivery-sub-title {
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                                font-size: 18px;
+                                color: #000000;
+                                letter-spacing: 2px;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                text-align: center;
+                            }
+                            .delivery-text {
+                                font-family:cooperhewitt;
+                                color: #000000;
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                text-align: center;
+                            }
+                        </style>
+                        <div class="delivery-container">
+                            <div class="delivery-main-title">9 Tage</div>
+                            <div class="delivery-sub-title">DURCHSCHNITTLICHE LIEFERZEIT</div>
+                            <div class="delivery-text">Das geht über alle Lieferungen hinweg. (Ohne Abholung)</div>
+                        </div>
+                    ';
+
 
 
     // Generate the full HTML
-    $html = $mitarbeiter . $mitarbeiterInfo . $mitarbeiterDiagram . $footer1;
+    $html = $logistik . $logistikInfo . $logistikTable . $deliveryInfo . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
