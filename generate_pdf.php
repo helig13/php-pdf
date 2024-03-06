@@ -1181,10 +1181,104 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                    ';
 
+    $mitarbeiter = '
+                <style>
+                    .header-container {
+                        background: #003D62;
+                        position: fixed;
+                        top: -60px;
+                        left: -60px;
+                        width: 120%;
+                        padding: 25px 0 25px 60px;
+                    }
+                    .header-title {
+                        font-family:cooperhewitt;
+                        font-weight: bold;
+                        font-size: 58px;
+                        color: #ffffff;
+                        letter-spacing: 1.5px;
+                    }
+                </style>
+                <div class="header-container">
+                    <span class="header-title">Mitarbeiter</span>
+                </div> 
+               ';
+
+    $mitarbeiterInfo = '
+                        <style>
+                            .mitarbeiter-info-container {
+                                padding-top: 80px;
+                            }
+                            .mitarbeiter-info-gerinf,
+                            .mitarbeiter-info-gesamt {
+                                width: 49%;
+                                float: left;
+                            }
+                            .mitarbeiter-info-gerinf-title,
+                            .mitarbeiter-info-gesamt-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 38px;
+                                color: #003D62;
+                                text-align: left;
+                                letter-spacing: 1.5px;
+                            }
+                            .mitarbeiter-info-gerinf-sub-title,
+                            .mitarbeiter-info-gesamt-sub-title {
+                                font-family:cooperhewitt;
+                                font-style: italic;
+                                font-size: 18px;
+                                color: #000000;
+                                text-align: left;
+                                letter-spacing: 2px;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                            }
+                            .mitarbeiter-info-gerinf-text,
+                            .mitarbeiter-info-gesamt-text {
+                                font-family:cooperhewitt;
+                                color: #000000;
+                                text-align: left;
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                            }
+                        </style>
+                        <div class="mitarbeiter-info-container">
+                            <div class="mitarbeiter-info-gesamt">
+                                <div class="mitarbeiter-info-gesamt-title">63 Mitarbeiter</div>
+                                <div class="mitarbeiter-info-gesamt-sub-title">GESAMT</div>
+                                <div class="mitarbeiter-info-gesamt-text">Inklusive geringfügig Beschäftigter</div>
+                                <div style="padding-top: 70px" class="mitarbeiter-info-gesamt-title">3</div>
+                                <div class="mitarbeiter-info-gesamt-sub-title">NEUE MITARBEITER</div>
+                            </div>
+                            <div class="mitarbeiter-info-gerinf">
+                                <div style="padding-top: 70px" class="mitarbeiter-info-gerinf-title">54 Mitarbeiter</div>
+                                <div class="mitarbeiter-info-gerinf-sub-title">O. GERINGF . B.</div>
+                                <div class="mitarbeiter-info-gerinf-text">ohne geringfügig Beschäftigte</div>
+                                <div style="padding-top: 70px" class="mitarbeiter-info-gerinf-title">3</div>
+                                <div class="mitarbeiter-info-gesamt-sub-title">GEKÜNDIGTERMI <br/> TARBEITER</div>
+                            </div>
+                        </div>   
+                       ';
+
+    $mitarbeiterDiagram = '
+                            <style>
+                                .mitarbeiter-info-container {
+                                    width: 100%;
+                                }
+                                .mitarbeiter-info-container img {
+                                    width: 100%;
+                                }
+                            </style>
+                            <div class="mitarbeiter-info-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/%D0%94%D1%96%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%B0_%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D1%96%D0%B2_%D0%BD%D0%BE%D1%80%D0%B2%D0%B5%D0%B3%D1%96%D1%8F.jpg" alt="">
+                            </div>
+                          ';
+
 
 
     // Generate the full HTML
-    $html = $produktion . $produktionTable . $footer1;
+    $html = $mitarbeiter . $mitarbeiterInfo . $mitarbeiterDiagram . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
