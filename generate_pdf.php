@@ -1444,11 +1444,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="delivery-text">Das geht über alle Lieferungen hinweg. (Ohne Abholung)</div>
                         </div>
                     ';
+    $finanzenHeader = '
+                        <style>
+                            .header-container {
+                                background: #003D62;
+                                position: fixed;
+                                top: -60px;
+                                left: -60px;
+                                width: 120%;
+                                padding: 25px 0 25px 60px;
+                            }
+                            .header-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 58px;
+                                color: #ffffff;
+                                letter-spacing: 1.5px;
+                            }
+                        </style>
+                        <div class="header-container">
+                            <span class="header-title">Finanzen</span>
+                        </div>
+                      ';
+
+    $finanzenDiagram = '
+                        <style>
+                            .finanzen-diagram-container {
+                                width: 100%;
+                                padding-top: 100px;
+                            }
+                            .finanzen-diagram-container img {
+                                width: 100%;
+                            }
+                            .finanzen-diagram-title {
+                                font-family:cooperhewitt;
+                                font-weight: bold;
+                                font-size: 26px;
+                                color: #000000;
+                                letter-spacing: 1.5px;
+                                text-align: left;
+                                padding-bottom: 10px;
+                            }
+                        </style>
+                        <div class="finanzen-diagram-container">
+                            <div class="finanzen-diagram-title">NET TOUMSATZENTWICKLUNG</div>
+                            <img src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/5e7b24db2922402b61cec2b7_line%20chart%20sample%201.jpeg" alt="">
+                        </div>
+                       ';
+
+    $finanzenDiagram2 = '
+                        <style>
+                            .finanzen-diagram-container-2 {
+                                width: 100%;
+                                padding-top: 10px;
+                            }
+                            .finanzen-diagram-container-2 img {
+                                width: 100%;
+                            }
+                        </style>
+                        <div class="finanzen-diagram-container-2">
+                            <div class="finanzen-diagram-title">NET TOUMSATZENTWICKLUNG</div>
+                            <img src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/5e7b24db2922402b61cec2b7_line%20chart%20sample%201.jpeg" alt="">
+                        </div>
+                       ';
 
 
 
     // Generate the full HTML
-    $html = $logistik . $logistikInfo . $logistikTable . $deliveryInfo . $footer1;
+    $html = $finanzenHeader . $finanzenDiagram . $finanzenDiagram2 . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
