@@ -384,9 +384,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         background: #003D62;
                         position: fixed;
                         bottom: -60px;
-                        left: -55px;
-                        width: 120%;
-                        padding: 20px 0 20px 60px;
+                        left: -60px;
+                        right: -57px;
+                        padding: 20px 60px 20px 60px;
                     }
                     .footer-title {
                         font-family:cooperhewitt;
@@ -394,10 +394,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         font-size: 14px;
                         color: #ffffff;
                         letter-spacing: 1.5px;
-                    }                
+                        width: 50%;
+                        float: left;
+                        text-align: left;
+                    }   
+                    .footer-page-number {
+                        font-family:cooperhewitt;
+                        font-style: italic;
+                        font-size: 14px;
+                        text-align: right;
+                        width: 50%;
+                        float: right;
+                        color: #ffffff;
+                    }             
                 </style>
                 <div class="footer-container">
-                    <span class="footer-title">Geschäftsführungsbericht</span>
+                    <div class="footer-title">Geschäftsführungsbericht</div>
+                    <div class="footer-page-number">1 of 15</div>
                 </div>
                ';
     $table = '
@@ -1508,10 +1521,153 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                        ';
 
+    $coilHeader = '
+                    <style>
+                        .header-container {
+                            background: #003D62;
+                            position: fixed;
+                            top: -60px;
+                            left: -60px;
+                            width: 120%;
+                            padding: 25px 0 25px 60px;
+                        }
+                        .header-title {
+                            font-family:cooperhewitt;
+                            font-weight: bold;
+                            font-size: 58px;
+                            color: #ffffff;
+                            letter-spacing: 1.5px;
+                        }
+                    </style>
+                    <div class="header-container">
+                        <span class="header-title">Coil und Lager</span>
+                    </div> 
+                  ';
+
+    $coilBody = '
+                    <style>
+                        .coil-body-container {
+                            width: 100%;
+                            padding-top: 60px;
+                        }
+                        .coil-body-left-block,
+                        .coil-body-right-block,
+                        .coil-body-center-block {
+                            width: 32%;
+                            float: left;
+                        }
+                        .coil-body-center-block {
+                            text-align: center;
+                        }
+                        .coil-body-left-info,
+                        .coil-body-center-info {
+                            background: #003D62;
+                            padding: 10px 10px;
+                            border-radius: 40px;
+                            text-align: center;
+                            width: 150px;
+                            margin: 0 auto;
+                            margin-top: 15px;
+                        }
+                        .coil-body-center-block .coil-body-center-info {
+                            background: #31356e;
+                            width: 125px;
+                            padding: 10px 5px;
+                            margin: 15px auto;
+                        }
+                        .coil-body-left-info .coil-info-total,
+                        .coil-body-center-block .coil-info-total {
+                            color: #ffffff;
+                            font-family:cooperhewitt;
+                            font-style: italic;
+                            font-size: 18px;
+                            letter-spacing: 1px;
+                            padding-bottom: 5px;
+                        }
+                        .coil-body-center-block .coil-info-total {
+                            font-size: 14px;
+                        }
+                        .coil-body-left-info .coil-info-text,
+                        .coil-body-center-block .coil-info-text {
+                            color: #ffffff;
+                            font-family:cooperhewitt;
+                            font-weight: lighter;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                        }
+                        .coil-body-center-block .coil-info-text {
+                            font-size: 10px;
+                        }
+                        .coil-body-center-block .coil-body-gesamtbestand-title {
+                            font-family:cooperhewitt;
+                            font-style: italic;
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                            width: 100%;
+                            text-align: center;
+                        }
+                        .coil-body-gesamtbestand-text {
+                            text-align: right;
+                            padding: 5px 5px 0 0;
+                            width: 45%;
+                            float: left;
+                        }
+                        .coil-body-gesamtbestand-number {
+                            text-align: left;
+                            padding: 5px 0 0 5px;
+                            width: 45%;
+                            float: left;
+                        }
+                        .coil-body-right-block {
+                            padding-top: 15px;
+                        }
+                        .coil-body-right-block img {
+                            height: 400px;
+                        }
+                    </style>
+                    <div class="coil-body-container">
+                        <div class="coil-body-left-block">
+                            <div class="coil-body-left-info">
+                                <div class="coil-info-total">2.757.928 €</div>
+                                <div class="coil-info-text">Lagerbestand (bez.)</div>
+                            </div>
+                            <div class="coil-body-left-info">
+                                <div class="coil-info-total">1.080.228 €</div>
+                                <div class="coil-info-text">davon Coils</div>
+                            </div>
+                            <div class="coil-body-left-info">
+                                <div class="coil-info-total">1.614,58 €</div>
+                                <div class="coil-info-text">Mittelwert pro Tonne</div>
+                            </div>
+                        </div>
+                        <div class="coil-body-center-block">
+                            <div class="coil-body-center-info">
+                                <div class="coil-info-total">506,49</div>
+                                <div class="coil-info-text">Tonnen Verbrauch</div>
+                            </div>
+                            <div class="coil-body-gesamtbestand-title">Gesamtbestand</div>
+                            <div class="coil-body-gesamtbestand-container">
+                                <div class="coil-body-gesamtbestand-text">Konsi</div>
+                                <div class="coil-body-gesamtbestand-number">4.507.355</div>
+                                <div class="coil-body-gesamtbestand-text">Lager bezahlt</div>
+                                <div class="coil-body-gesamtbestand-number">4.507.355</div>
+                                <div class="coil-body-gesamtbestand-text">in Bestellung</div>
+                                <div class="coil-body-gesamtbestand-number">4.507.355</div>
+                                <div class="coil-body-gesamtbestand-text">Gesamt</div>
+                                <div class="coil-body-gesamtbestand-number">4.507.355</div>
+                            </div>
+                        </div>
+                        <div class="coil-body-right-block">
+                            <img src="https://web.posibnyky.vntu.edu.ua/fmbt/2023_savulak_Uprav_yakist_prod_(Ind_sam_rob_stud)/img/form1/clip_image073.gif" alt="">
+                        </div>
+                    </div>
+                    
+                ';
+
 
 
     // Generate the full HTML
-    $html = $finanzenHeader . $finanzenDiagram . $finanzenDiagram2 . $footer1;
+    $html = $coilHeader . $coilBody . $footer1;
 
     // Write HTML content to PDF
     $mpdf->WriteHTML($html);
